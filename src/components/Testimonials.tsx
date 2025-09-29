@@ -5,44 +5,44 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Priya Sharma",
-    role: "Data Analyst at TCS",
+    role: "Cloud Engineer at TCS",
     rating: 5,
-    content: "This DevOps course was very good. Great DevOps course! Learned Git, Docker, Kubernetes, Terraform, Ansible, and Jenkins with lots of hands-on practice. The trainer explained everything in a simple way.",
+    content: "This cloud practitioner course was excellent! Great hands-on training with AWS, Azure, and GCP. Learned Docker, Kubernetes, Terraform with lots of practical labs. The trainer explained cloud concepts in a simple way.",
     image: "PS"
   },
   {
     name: "Rajesh Kumar", 
-    role: "Business Intelligence Developer",
+    role: "DevOps Engineer at Wipro",
     rating: 5,
-    content: "The data analytics course transformed my career completely. The practical approach and real-world projects helped me land my dream job. Highly recommended for anyone looking to break into data analytics.",
+    content: "The cloud computing course transformed my career completely. The practical approach with real cloud deployments helped me land my dream job as a DevOps engineer. Highly recommended for cloud beginners.",
     image: "RK"
   },
   {
     name: "Sneha Patel",
-    role: "Junior Data Scientist", 
+    role: "AWS Solutions Architect", 
     rating: 5,
-    content: "Excellent course structure with comprehensive coverage of all essential tools. The mentors were incredibly supportive and the placement assistance was outstanding. Worth every penny!",
+    content: "Excellent course structure covering all major cloud platforms. The mentors were incredibly supportive and the certification guidance was outstanding. Got AWS certified within 3 months!",
     image: "SP"
   },
   {
     name: "Arjun Reddy",
-    role: "SQL Developer at Infosys",
+    role: "Cloud Consultant at Infosys",
     rating: 5,
-    content: "The hands-on approach made learning SQL and Python so much easier. The course content is up-to-date with industry standards. Got placed within 2 months of course completion!",
+    content: "The hands-on approach made learning cloud technologies so much easier. The course content covers industry best practices. Got placed as Cloud Consultant within 2 months of course completion!",
     image: "AR"
   },
   {
     name: "Meera Singh",
-    role: "Tableau Developer",
+    role: "Azure Developer",
     rating: 5,
-    content: "Amazing experience! The instructors are knowledgeable and patient. The course covers everything from basics to advanced concepts. The certification helped me get a 40% salary hike.",
+    content: "Amazing experience! The instructors are cloud experts with real industry knowledge. The course covers everything from basics to advanced cloud architecture. Got a 50% salary hike after certification.",
     image: "MS"
   },
   {
     name: "Vikram Joshi",
-    role: "Data Analyst at Wipro", 
+    role: "Cloud Security Specialist", 
     rating: 5,
-    content: "Best investment I made for my career. The course is well-structured, practical, and industry-relevant. The lifetime placement support is a huge advantage. Absolutely recommend Jeevi Academy!",
+    content: "Best investment for my cloud career. The course is comprehensive, practical, and industry-relevant. The lifetime placement support is incredible. Absolutely recommend Jeevi Academy for cloud training!",
     image: "VJ"
   }
 ];

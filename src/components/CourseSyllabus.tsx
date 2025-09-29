@@ -1,81 +1,81 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Code, 
+  Cloud, 
+  Server, 
+  Shield, 
+  Settings, 
   Database, 
-  BarChart3, 
-  TrendingUp, 
-  PieChart, 
-  TableProperties,
-  Brain,
+  Network,
+  Box,
   Layers
 } from "lucide-react";
 
 const modules = [
   {
-    category: "Python Fundamentals",
-    icon: Code,
+    category: "AWS Fundamentals",
+    icon: Cloud,
     color: "from-primary to-primary-light",
     topics: [
-      "Introduction to Python",
-      "Control Flow & Functions in Python", 
-      "NumPy for Data Analysis",
-      "Pandas for Data Handling"
+      "AWS Account Setup & IAM",
+      "EC2 Instances & Auto Scaling", 
+      "S3 Storage & Data Management",
+      "VPC & Networking Basics"
     ]
   },
   {
-    category: "Data Processing",
-    icon: Layers,
+    category: "Azure Essentials",
+    icon: Server,
     color: "from-secondary to-accent",
     topics: [
-      "Data Cleaning & Preprocessing",
-      "Exploratory Data Analysis (EDA)",
-      "Statistical Analysis Methods",
-      "Data Transformation Techniques"
+      "Azure Portal & Resource Groups",
+      "Virtual Machines & App Services",
+      "Azure Storage & Blob Services",
+      "Azure Active Directory"
     ]
   },
   {
-    category: "Visualization",
-    icon: BarChart3,
+    category: "Google Cloud Platform",
+    icon: Database,
     color: "from-accent to-warning",
     topics: [
-      "Data Visualization with Matplotlib",
-      "Advanced Visualization with Seaborn",
-      "Interactive Charts & Dashboards",
-      "Visual Storytelling"
+      "GCP Console & Projects",
+      "Compute Engine & Cloud Functions",
+      "Cloud Storage & BigQuery",
+      "Cloud Identity & Access Management"
     ]
   },
   {
-    category: "SQL & Databases",
-    icon: Database,
+    category: "Cloud Security",
+    icon: Shield,
     color: "from-warning to-success",
     topics: [
-      "SQL Fundamentals", 
-      "SQL Querying & Joins",
-      "Advanced SQL Concepts",
-      "SQL Performance & Transactions"
+      "Identity & Access Management", 
+      "Network Security Groups",
+      "Data Encryption & Key Management",
+      "Compliance & Governance"
     ]
   },
   {
-    category: "Business Intelligence",
-    icon: PieChart,
+    category: "DevOps & Automation",
+    icon: Settings,
     color: "from-success to-primary",
     topics: [
-      "Tableau Fundamentals",
-      "Tableau Advanced Analysis", 
-      "Power BI Essentials",
-      "Power BI Advanced Analysis"
+      "Infrastructure as Code (Terraform)",
+      "CI/CD Pipelines (Jenkins/GitHub Actions)", 
+      "Configuration Management",
+      "Monitoring & Logging"
     ]
   },
   {
-    category: "Applied Analytics",
-    icon: Brain,
+    category: "Containerization",
+    icon: Box,
     color: "from-primary-dark to-secondary",
     topics: [
-      "Real-world Project Implementation",
-      "Industry Case Studies",
-      "Portfolio Development",
-      "Capstone Project"
+      "Docker Fundamentals",
+      "Kubernetes Orchestration",
+      "Container Registry & Deployment",
+      "Microservices Architecture"
     ]
   }
 ];
@@ -93,8 +93,8 @@ const CourseSyllabus = () => {
             <span className="gradient-text">Learning Path</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            16 comprehensive modules covering everything from Python basics to advanced 
-            business intelligence tools, designed to make you job-ready in 90 days.
+            18 comprehensive modules covering AWS, Azure, Google Cloud, security, and DevOps 
+            fundamentals, designed to make you cloud-ready in 90 days.
           </p>
         </div>
 
@@ -143,11 +143,11 @@ const CourseSyllabus = () => {
         <div className="mt-16 text-center animate-fade-in">
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
-              Ready to Start Your Data Analytics Journey?
+              Ready to Start Your Cloud Career Journey?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Join thousands of successful graduates who transformed their careers with our 
-              comprehensive data analytics program. Start your journey today!
+              comprehensive cloud practitioner program. Start your cloud journey today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-hero">

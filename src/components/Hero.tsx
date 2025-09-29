@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, Award, Clock, Users } from "lucide-react";
+import heroImage from "@/assets/cloud-hero.jpg";
 
 const Hero = () => {
   return (
@@ -28,13 +29,13 @@ const Hero = () => {
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Become a{" "}
               <span className="gradient-text">
-                Certified Data Analyst
+                Certified Cloud Practitioner
               </span>{" "}
               in 90 Days
             </h1>
 
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-lg">
-              Master the art of turning raw data into meaningful insights that drive business decisions. Get job-ready skills with industry-standard tools.
+              Master cloud computing fundamentals with AWS, Azure, and Google Cloud. Build scalable solutions and advance your cloud career with hands-on training.
             </p>
 
             <div className="grid grid-cols-2 gap-6 mb-8">
@@ -71,30 +72,37 @@ const Hero = () => {
           {/* Right Content - Hero Visual */}
           <div className="animate-slide-up">
             <div className="relative">
-              <div className="hero-glow rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 p-8">
-                <div className="bg-card rounded-xl p-6 space-y-4">
+              <div className="hero-glow rounded-2xl overflow-hidden">
+                <img 
+                  src={heroImage} 
+                  alt="Cloud computing infrastructure with AWS, Azure, and Google Cloud platforms"
+                  className="w-full h-full object-cover rounded-2xl opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/40 rounded-2xl"></div>
+                <div className="absolute inset-0 p-8 flex items-end">
+                  <div className="bg-card/95 backdrop-blur-sm rounded-xl p-6 space-y-4 w-full">
                   <div className="flex items-center justify-between">
                     <h3 className="text-lg font-semibold">Course Overview</h3>
                     <Badge className="bg-success text-success-foreground">Live</Badge>
                   </div>
                   
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-primary"></div>
-                      <span className="text-sm">Python & Data Analysis</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-secondary"></div>
-                      <span className="text-sm">SQL & Database Management</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-accent"></div>
-                      <span className="text-sm">Tableau & Power BI</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-warning"></div>
-                      <span className="text-sm">Real Projects & Certification</span>
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-primary"></div>
+                    <span className="text-sm">AWS Cloud Fundamentals</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-secondary"></div>
+                    <span className="text-sm">Azure & Google Cloud</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-accent"></div>
+                    <span className="text-sm">Cloud Security & DevOps</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-warning"></div>
+                    <span className="text-sm">Hands-on Labs & Certification</span>
+                  </div>
                   </div>
 
                   <div className="pt-4 border-t border-border">
@@ -106,6 +114,7 @@ const Hero = () => {
                       <div className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full w-0 animate-pulse"></div>
                     </div>
                   </div>
+                </div>
                 </div>
               </div>
             </div>

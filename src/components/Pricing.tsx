@@ -36,11 +36,11 @@ const Pricing = () => {
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Start Your{" "}
-            <span className="gradient-text">Data Analytics</span>{" "}
+            <span className="gradient-text">Cloud Practitioner</span>{" "}
             Journey Today
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Transform your career with our comprehensive data analytics program. 
+            Transform your career with our comprehensive cloud practitioner program. 
             Limited time offer - Get 20% off on enrollment!
           </p>
         </div>
@@ -57,10 +57,10 @@ const Pricing = () => {
                 <Sparkles className="w-6 h-6 text-warning animate-pulse" />
               </div>
               <h3 className="text-3xl font-bold mb-2">
-                Complete Data Analytics Certification
+                Complete Cloud Practitioner Certification
               </h3>
               <p className="text-muted-foreground">
-                Everything you need to become a certified data analyst in 90 days
+                Everything you need to become a certified cloud practitioner in 90 days
               </p>
             </CardHeader>
             

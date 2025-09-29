@@ -1,28 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Database, 
-  BarChart, 
-  Code, 
-  Brain,
+  Cloud, 
+  Server, 
+  Shield, 
+  Zap,
   CheckCircle,
   ArrowRight
 } from "lucide-react";
+import professionalImage from "@/assets/cloud-professional.jpg";
 
 const skills = [
-  { icon: Code, name: "Python Programming", level: 95 },
-  { icon: Database, name: "SQL & Databases", level: 90 },
-  { icon: BarChart, name: "Data Visualization", level: 88 },
-  { icon: Brain, name: "Statistical Analysis", level: 92 }
+  { icon: Cloud, name: "AWS Cloud Services", level: 95 },
+  { icon: Server, name: "Azure & Google Cloud", level: 90 },
+  { icon: Shield, name: "Cloud Security", level: 88 },
+  { icon: Zap, name: "DevOps & Automation", level: 92 }
 ];
 
 const learningPoints = [
-  "Master data collection, cleaning, and preprocessing techniques",
-  "Learn advanced visualization with Matplotlib and Seaborn", 
-  "Build expertise in SQL querying and database management",
-  "Create interactive dashboards with Tableau and Power BI",
-  "Develop statistical analysis and interpretation skills",
-  "Work on real-world projects and case studies"
+  "Master AWS EC2, S3, RDS, and core cloud services",
+  "Learn Azure Virtual Machines, Storage, and App Services", 
+  "Build expertise in Google Cloud Platform and Kubernetes",
+  "Implement cloud security best practices and compliance",
+  "Develop CI/CD pipelines and automation workflows",
+  "Work on real-world cloud migration and deployment projects"
 ];
 
 const About = () => {
@@ -37,15 +38,15 @@ const About = () => {
             </Badge>
             
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Transform Raw Data into{" "}
-              <span className="gradient-text">Meaningful Insights</span>
+              Transform Your Career with{" "}
+              <span className="gradient-text">Cloud Expertise</span>
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Our Data Analytics Course is designed to help learners master the art of turning 
-              raw data into meaningful insights that drive business decisions. Whether you are 
-              a beginner or a professional looking to upgrade your skills, this course provides 
-              a strong foundation using industry-standard tools.
+              Our Cloud Practitioner Course is designed to help learners master cloud computing 
+              fundamentals across AWS, Azure, and Google Cloud platforms. Whether you are 
+              a beginner or a professional looking to advance your cloud skills, this course provides 
+              comprehensive training with industry-recognized certifications.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -65,7 +66,13 @@ const About = () => {
 
           {/* Right Content - Skills */}
           <div className="animate-slide-up">
-            <div className="bg-gradient-to-br from-card to-muted/50 rounded-2xl p-8 hero-glow">
+            <div className="relative">
+              <img 
+                src={professionalImage} 
+                alt="Cloud professional working with multiple cloud platforms and dashboards"
+                className="w-full h-64 object-cover rounded-2xl mb-8 opacity-80"
+              />
+              <div className="bg-gradient-to-br from-card to-muted/50 rounded-2xl p-8 hero-glow">
               <h3 className="text-2xl font-bold mb-8 text-center">
                 Skills You'll Master
               </h3>
@@ -107,9 +114,10 @@ const About = () => {
                   <p className="text-2xl font-bold gradient-text">91.25%</p>
                 </div>
               </div>
+              </div>
+            </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
   );

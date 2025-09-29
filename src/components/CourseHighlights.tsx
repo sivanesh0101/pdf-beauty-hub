@@ -58,11 +58,11 @@ const CourseHighlights = () => {
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Why Choose Our{" "}
-            <span className="gradient-text">Data Analytics</span> Course?
+            <span className="gradient-text">Cloud Practitioner</span> Course?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive training designed to transform you into a skilled data analyst 
-            with hands-on experience and industry-recognized certification.
+            Comprehensive training designed to transform you into a certified cloud professional 
+            with hands-on experience across AWS, Azure, and Google Cloud platforms.
           </p>
         </div>
 

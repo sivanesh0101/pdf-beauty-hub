@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import certificationImage from "@/assets/cloud-certification.jpg";
 import { 
   Target, 
   Wrench, 
@@ -12,36 +13,36 @@ import {
 const reasons = [
   {
     icon: Target,
-    title: "Learn by Doing 100%",
-    description: "Experience hands-on, practical, project-based training that mirrors real-world scenarios.",
+    title: "Hands-on Cloud Labs",
+    description: "Experience practical, hands-on training with real cloud environments across AWS, Azure, and GCP.",
     color: "from-primary to-primary-light"
   },
   {
     icon: Wrench,
-    title: "Master In-Demand Tools", 
-    description: "Master the most in-demand tools: Python, SQL, Tableau, Power BI, and advanced analytics platforms.",
+    title: "Master Top Cloud Platforms", 
+    description: "Master the most in-demand cloud platforms: AWS, Microsoft Azure, Google Cloud, and containerization technologies.",
     color: "from-secondary to-accent"
   },
   {
     icon: Zap,
-    title: "Build Job-Ready Skills",
-    description: "Build job-ready skills in just 90 days with intensive, focused training and real project experience.",
+    title: "Build Production-Ready Skills",
+    description: "Build job-ready cloud skills in just 90 days with intensive training on real cloud deployments and architecture.",
     color: "from-accent to-warning"
   },
   {
     icon: Award,
-    title: "Certification & Guidance",
-    description: "Get globally recognized certification and comprehensive career guidance from industry experts.",
+    title: "Industry Certifications",
+    description: "Get globally recognized cloud certifications from AWS, Azure, and Google Cloud with expert career guidance.",
     color: "from-warning to-success"
   }
 ];
 
 const certifications = [
-  { name: "CyberDefenders", subtitle: "Defend Smarter, Not Harder" },
-  { name: "PECB", subtitle: "Authorized Partner" },
-  { name: "CompTIA", subtitle: "PARTNER" },
-  { name: "CertiProf", subtitle: "Professional Knowledge" },
-  { name: "CERTNEXUS", subtitle: "Certified Excellence" }
+  { name: "AWS Certified", subtitle: "Cloud Practitioner" },
+  { name: "Microsoft Azure", subtitle: "Fundamentals" },
+  { name: "Google Cloud", subtitle: "Associate" },
+  { name: "CompTIA", subtitle: "Cloud+" },
+  { name: "Kubernetes", subtitle: "CKAD Certified" }
 ];
 
 const WhyChoose = () => {
@@ -57,19 +58,20 @@ const WhyChoose = () => {
             </Badge>
             
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Why Data Analytics{" "}
+              Why Cloud Computing{" "}
               <span className="gradient-text">Matters Today?</span>
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Data is everywhere and the ability to analyze and interpret it has become one of 
-              the most valuable skills in today's digital era. Organizations across industries 
-              rely on data to make smarter decisions, improve efficiency and identify new opportunities.
+              Cloud computing has revolutionized how businesses operate, offering scalability, 
+              cost-efficiency, and innovation like never before. Organizations across industries 
+              are migrating to the cloud to stay competitive and agile.
             </p>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              By learning data analytics, you gain the power to transform raw information into 
-              meaningful insights that drive business growth and success.
+              By mastering cloud technologies, you position yourself at the forefront of digital 
+              transformation, opening doors to high-paying careers in cloud architecture, DevOps, 
+              and cloud security.
             </p>
 
             <Button className="btn-hero group">
@@ -113,11 +115,19 @@ const WhyChoose = () => {
         <div className="animate-fade-in">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold mb-4">
-              Accredited Training Partner & Certifications
+              Cloud Certifications & Training Partners
             </h3>
             <p className="text-muted-foreground">
-              Globally recognized certifications from leading industry organizations
+              Industry-recognized certifications from leading cloud providers
             </p>
+          </div>
+
+          <div className="flex justify-center mb-8">
+            <img 
+              src={certificationImage} 
+              alt="Cloud computing certification badges from AWS, Azure, and Google Cloud"
+              className="max-w-md h-48 object-contain rounded-lg opacity-90"
+            />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
