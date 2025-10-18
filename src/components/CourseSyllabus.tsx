@@ -1,181 +1,81 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { 
-  Terminal, 
-  Network, 
   Cloud, 
-  Server,
+  Server, 
   Shield, 
-  CreditCard, 
-  Building,
-  GraduationCap
+  Settings, 
+  Database, 
+  Network,
+  Box,
+  Layers
 } from "lucide-react";
 
 const modules = [
   {
-    number: 1,
-    title: "Foundations – Linux & Networking",
-    icon: Terminal,
-    color: "from-blue-500 to-cyan-500",
-    sections: [
-      {
-        title: "Linux",
-        topics: [
-          "File & Directory Management, File Types",
-          "User/Group Management, Permissions", 
-          "Sudo vs su",
-          "Links (Hard vs Soft)",
-          "Package Managers (yum, apt, dnf)",
-          "Standard I/O, Source Command",
-          "Shell Scripting (variables, conditionals, loops, debugging, cron jobs)",
-          "Git & GitHub Basics (VCS, workflow, stashing, merging)"
-        ]
-      },
-      {
-        title: "Networking", 
-        topics: [
-          "OSI & TCP/IP Models",
-          "IP Addressing & Subnetting",
-          "Ports, Protocols, Routing Types",
-          "Ping, TCP Handshake, NIC",
-          "Firewall, Proxy, DNS, ISP Interconnection",
-          "SSL/TLS, mTLS Simplified"
-        ]
-      }
-    ]
-  },
-  {
-    number: 2,
-    title: "Cloud Fundamentals",
+    category: "AWS Fundamentals",
     icon: Cloud,
-    color: "from-purple-500 to-pink-500",
-    sections: [
-      {
-        title: "Core Concepts",
-        topics: [
-          "What is Cloud Computing? (examples: Google Drive, Netflix, WhatsApp backups)",
-          "Benefits: cost savings, scalability, elasticity, high availability, fault tolerance, agility",
-          "Service Models: IaaS, PaaS, SaaS",
-          "Deployment Models: Public, Private, Hybrid",
-          "Features: Scalability, Elasticity, High Availability, Fault Tolerance"
-        ]
-      }
+    color: "from-primary to-primary-light",
+    topics: [
+      "AWS Account Setup & IAM",
+      "EC2 Instances & Auto Scaling", 
+      "S3 Storage & Data Management",
+      "VPC & Networking Basics"
     ]
   },
   {
-    number: 3,
-    title: "AWS Core Services",
+    category: "Azure Essentials",
     icon: Server,
-    color: "from-orange-500 to-red-500",
-    sections: [
-      {
-        title: "Compute",
-        topics: [
-          "EC2 Basics, Instance Types, Purchasing Options",
-          "SSH, Security Groups, EC2 Roles",
-          "Auto Scaling & Load Balancing"
-        ]
-      },
-      {
-        title: "Storage",
-        topics: [
-          "S3 Basics, Bucket Policies, Versioning, Replication, Storage Classes",
-          "Snow Family, Storage Gateway",
-          "EBS, AMI, Snapshots, EFS, FSx"
-        ]
-      },
-      {
-        title: "Databases & Analytics",
-        topics: [
-          "RDS & Aurora (deployments, backups)",
-          "DynamoDB (+ Global Tables)",
-          "ElastiCache, Redshift, Athena, QuickSight",
-          "DMS Basics",
-          "Awareness: EMR, DocumentDB, Neptune, Timestream, Glue"
-        ]
-      },
-      {
-        title: "Networking",
-        topics: [
-          "VPC, Subnets, IGW, NAT",
-          "Security Groups vs NACL",
-          "VPC Peering, Endpoints, PrivateLink",
-          "Route 53, CloudFront, Global Accelerator"
-        ]
-      }
+    color: "from-secondary to-accent",
+    topics: [
+      "Azure Portal & Resource Groups",
+      "Virtual Machines & App Services",
+      "Azure Storage & Blob Services",
+      "Azure Active Directory"
     ]
   },
   {
-    number: 4,
-    title: "Security & Compliance",
+    category: "Google Cloud Platform",
+    icon: Database,
+    color: "from-accent to-warning",
+    topics: [
+      "GCP Console & Projects",
+      "Compute Engine & Cloud Functions",
+      "Cloud Storage & BigQuery",
+      "Cloud Identity & Access Management"
+    ]
+  },
+  {
+    category: "Cloud Security",
     icon: Shield,
-    color: "from-green-500 to-emerald-500",
-    sections: [
-      {
-        title: "Security Services",
-        topics: [
-          "IAM (Users, Groups, Policies, Roles)",
-          "MFA, Access Keys, CLI/SDK, CloudShell",
-          "Encryption (KMS, CloudHSM, ACM)",
-          "WAF, Shield, Firewall Manager",
-          "GuardDuty, Inspector, Macie, Config, Security Hub"
-        ]
-      }
+    color: "from-warning to-success",
+    topics: [
+      "Identity & Access Management", 
+      "Network Security Groups",
+      "Data Encryption & Key Management",
+      "Compliance & Governance"
     ]
   },
   {
-    number: 5,
-    title: "Billing & Support",
-    icon: CreditCard,
-    color: "from-yellow-500 to-orange-500",
-    sections: [
-      {
-        title: "Cost Management",
-        topics: [
-          "AWS Organizations & Consolidated Billing",
-          "Pricing Models (On-Demand, Reserved, Spot, Savings Plans)",
-          "Tools: Pricing Calculator, Cost Explorer, Budgets, Trusted Advisor",
-          "Support Plans (Developer, Business, Enterprise)"
-        ]
-      }
+    category: "DevOps & Automation",
+    icon: Settings,
+    color: "from-success to-primary",
+    topics: [
+      "Infrastructure as Code (Terraform)",
+      "CI/CD Pipelines (Jenkins/GitHub Actions)", 
+      "Configuration Management",
+      "Monitoring & Logging"
     ]
   },
   {
-    number: 6,
-    title: "Architecting & Best Practices",
-    icon: Building,
-    color: "from-indigo-500 to-purple-500",
-    sections: [
-      {
-        title: "Architecture Framework",
-        topics: [
-          "AWS Well-Architected Framework (6 Pillars)",
-          "Shared Responsibility Model",
-          "CAF (Cloud Adoption Framework)",
-          "Right-Sizing & Cost Optimization"
-        ]
-      }
-    ]
-  },
-  {
-    number: 7,
-    title: "Exam Preparation",
-    icon: GraduationCap,
-    color: "from-teal-500 to-blue-500",
-    sections: [
-      {
-        title: "Final Preparation",
-        topics: [
-          "Sample Questions & Practice Exam",
-          "AWS Whitepapers (Well-Architected, CAF)",
-          "Exam Tips & Time Management"
-        ]
-      }
+    category: "Containerization",
+    icon: Box,
+    color: "from-primary-dark to-secondary",
+    topics: [
+      "Docker Fundamentals",
+      "Kubernetes Orchestration",
+      "Container Registry & Deployment",
+      "Microservices Architecture"
     ]
   }
 ];
@@ -189,68 +89,55 @@ const CourseSyllabus = () => {
             Course Syllabus
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            AWS Cloud Practitioner{" "}
-            <span className="gradient-text">Certification Path</span>
+            Comprehensive{" "}
+            <span className="gradient-text">Learning Path</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Complete 7-module AWS Cloud Practitioner certification course covering Linux fundamentals, 
-            cloud concepts, AWS core services, security, and exam preparation.
+            18 comprehensive modules covering AWS, Azure, Google Cloud, security, and DevOps 
+            fundamentals, designed to make you cloud-ready in 90 days.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
-            {modules.map((module, index) => {
-              const Icon = module.icon;
-              return (
-                <AccordionItem 
-                  key={index} 
-                  value={`module-${index}`}
-                  className="border border-border/50 rounded-lg bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300"
-                >
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline group">
-                    <div className="flex items-center gap-4 w-full">
-                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${module.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-1 text-left">
-                        <div className="flex items-center gap-3 mb-1">
-                          <Badge variant="secondary" className="text-xs">
-                            Module {module.number}
-                          </Badge>
-                        </div>
-                        <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
-                          {module.title}
-                        </h3>
-                      </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {modules.map((module, index) => {
+            const Icon = module.icon;
+            return (
+              <Card 
+                key={index}
+                className="card-gradient group hover:shadow-glow transition-all duration-300 border-0 h-full"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${module.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className="w-7 h-7 text-white" />
                     </div>
-                  </AccordionTrigger>
-                  
-                  <AccordionContent className="px-6 pb-6">
-                    <div className="space-y-6">
-                      {module.sections.map((section, sectionIndex) => (
-                        <div key={sectionIndex} className="space-y-3">
-                          <h4 className="text-md font-medium text-primary border-b border-border/30 pb-2">
-                            {section.title}
-                          </h4>
-                          <div className="space-y-2 pl-4">
-                            {section.topics.map((topic, topicIndex) => (
-                              <div key={topicIndex} className="flex items-start gap-3">
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary/60 mt-2 flex-shrink-0"></div>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
-                                  {topic}
-                                </p>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
+                    <div>
+                      <Badge variant="secondary" className="text-xs mb-2">
+                        Module {index + 1}
+                      </Badge>
+                      <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                        {module.category}
+                      </CardTitle>
                     </div>
-                  </AccordionContent>
-                </AccordionItem>
-              );
-            })}
-          </Accordion>
+                  </div>
+                </CardHeader>
+                
+                <CardContent className="pt-0">
+                  <div className="space-y-3">
+                    {module.topics.map((topic, topicIndex) => (
+                      <div key={topicIndex} className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {topic}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         <div className="mt-16 text-center animate-fade-in">
